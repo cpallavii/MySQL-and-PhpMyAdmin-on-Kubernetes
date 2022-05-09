@@ -19,6 +19,9 @@ spec:
           name: mysql
 
           env:
+            - name: MYSQL_DATABASE
+              value: myDB
+
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -29,11 +32,11 @@ spec:
                 secretKeyRef:
                   name: mysql-secret
                   key: mysql-user
-            - name: MYSQL_DATABASE
-              valueFrom:
-                secretKeyRef:
-                  name: mysql-secret
-                  key: mysql-database
+            # - name: MYSQL_DATABASE
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: mysql-secret
+            #       key: mysql-database
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:

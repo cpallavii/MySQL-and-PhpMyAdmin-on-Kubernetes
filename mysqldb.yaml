@@ -20,7 +20,7 @@ spec:
 
           env:
             - name: MYSQL_DATABASE
-              value: myDB
+              value: myDB # Here is the database will be created
 
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:

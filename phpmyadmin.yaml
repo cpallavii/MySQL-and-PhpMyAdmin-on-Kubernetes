@@ -42,7 +42,7 @@ metadata:
 spec:
   selector:
     app: phpmyadmin
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: phpmyadmin
       port: 80
